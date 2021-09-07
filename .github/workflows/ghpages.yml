@@ -26,3 +26,7 @@ jobs:
         # меняем '/' на '/BlazorGitHubPagesDemo/'
     - name: Change base-tag in index.html from / to WasmBlazor
       run: sed -i 's/<base href="\/" \/>/<base href="\/WasmBlazor\/" \/>/g' release/wwwroot/index.html
+      
+            # отключаем jekyll
+    - name: Add .nojekyll file
+      run: touch release/wwwroot/.nojekyll
